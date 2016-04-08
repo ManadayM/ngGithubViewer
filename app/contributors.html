@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    
+    <h2>Contributors</h2>
+    
+    <div class="row">
+        <div ng-repeat='user in contributors' class="col-md-3" style="margin: 15px 0px 15px 0px;">
+            <a href="{{user.html_url}}" target="_blank">
+                <p>
+                    <strong>{{ ($index + 1) + '. ' + (user.login | uppercase) }}</strong>
+                </p>
+                <img class="img-responsive img-circle" src='{{user.avatar_url}}' alt='{{user.login}}' style="width:100px; height:100px" />
+            </a>
+        </div>
+    </div>
+</div>

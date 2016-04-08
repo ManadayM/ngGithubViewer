@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="githubViewer">
+
+<head>
+    
+    <title>
+        Github Viewer
+    </title>
+    
+    <!-- META SECTION -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <!-- TOP NAVBAR -->
+    <div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/">
+                        Github Viewer
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    <!-- CONTENT -->
+    <div class="container-fluid" ng-view></div>
+    
+    <!-- SCRIPT INCLUDES -->
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/github.service.js"></script>
+    <script src="app/search.controller.js"></script>
+    <script src="app/repolist.controller.js"></script>
+    <script src="app/contributors.controller.js"></script>
+</body>
+
+</html>

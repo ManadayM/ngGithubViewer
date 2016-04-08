@@ -1,0 +1,41 @@
+<div>
+
+    <h2>{{ username }}'s Repositories</h2>
+        
+    <br />
+
+    <div>
+        <strong>Sort:</strong>
+
+        <select ng-model='repoSortOrder'>
+            <option value='+name'>Name</option>
+            <option value='-stargazers_count'>Stars</option>
+            <option value='+language'>Language</option>
+        </select>
+    </div>
+    
+    <table class="table table-hover" style="margin: 15px 0px 15px 0px;">
+    
+        <!-- header -->
+        <thead>
+            <tr>
+                <th># NAME</th>
+                <th># STARS</th>
+                <th># LANGUAGE</th>
+            </tr>
+        </thead>
+    
+        <!-- body -->
+        <tbody>
+            <tr ng-repeat='repo in repos | orderBy:repoSortOrder'>
+                <td>
+                    <a href='#/{{repo.owner.login}}/{{repo.name}}/contributors'>{{repo.name}}</a>
+                </td>
+                <td>{{repo.stargazers_count | number}}</td>
+                <td>{{repo.language}}</td>
+            </tr>
+        </tbody>
+    
+    </table>
+    
+</div>
