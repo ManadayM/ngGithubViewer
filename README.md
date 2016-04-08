@@ -3,4 +3,5 @@
 Simple angular example app
 
 How to use:
-* On Home/Search page enter github user name like "angular" and hit Search button
+* You should run this app on server/localhost
+* If you've node installed then "httpster" will help you to quickly setup http server. More details https://github.com/SimbCo/httpster
